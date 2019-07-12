@@ -24,7 +24,11 @@
     "zone.js": "~0.9.1"
   },
   "scripts": {
-    "sonar-scanner": "node_modules/sonar-scanner/bin/sonar-scanner"
+    "start": "angular-scripts start",
+    "build": "angular-scripts build",
+    "sonar": "node sonar-project.js",
+    "test": "CI=true angular-scripts test --env=jsdom",
+    "eject": "angular-scripts eject"
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "~0.801.0",
