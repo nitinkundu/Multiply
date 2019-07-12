@@ -25,7 +25,7 @@
   },
   "scripts": {
     "sonar-scanner": "node_modules/sonar-scanner/bin/sonar-scanner"
-  }
+  },
   "devDependencies": {
     "@angular-devkit/build-angular": "~0.801.0",
     "@angular/cli": "~8.1.0",
