@@ -23,13 +23,7 @@
     "tslib": "^1.9.0",
     "zone.js": "~0.9.1"
   },
-  "scripts": {
-    "start": "angular-scripts start",
-    "build": "angular-scripts build",
-    "sonar": "node sonar-project.js",
-    "test": "CI=true angular-scripts test --env=jsdom",
-    "eject": "angular-scripts eject"
-  },
+ 
   "devDependencies": {
     "@angular-devkit/build-angular": "~0.801.0",
     "@angular/cli": "~8.1.0",
