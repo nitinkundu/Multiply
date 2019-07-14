@@ -31,3 +31,4 @@ describe('AppComponent', () => {
     const compiled = fixture.debugElement.nativeElement;
     expect(compiled.querySelector('h1').textContent).toContain('!Multiplication Made Easy!');
   }));
+}
