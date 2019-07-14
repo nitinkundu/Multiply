@@ -23,8 +23,8 @@ module.exports = function (config) {
       }
     },
     coverageIstanbulReporter: {
-      dir: require('path').join(__dirname, './coverage/Multiply'),
-      reports: ['html', 'lcovonly', 'text-summary'],
+      dir: require('path').join(__dirname, '../coverage/Multiply'),
+      reports: ['html', 'lcovonly'],
       fixWebpackSourcePaths: true,
       thresholds: {
         statements: 50,
