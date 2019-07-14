@@ -15,10 +15,23 @@ module.exports = function (config) {
     client: {
       clearContext: false // leave Jasmine Spec Runner output visible in browser
     },
+    browsers: ['Chrome'],
+      customLaunchers: {
+      ChromeHeadlessCI: {
+      base: 'ChromeHeadless',
+      flags: ['--no-sandbox']
+      }
+    },
     coverageIstanbulReporter: {
       dir: require('path').join(__dirname, './coverage/Multiply'),
       reports: ['html', 'lcovonly', 'text-summary'],
-      fixWebpackSourcePaths: true
+      fixWebpackSourcePaths: true,
+      thresholds: {
+        statements: 50,
+        lines: 50,
+        branches: 50,
+        functions: 50
+      }
     },
     reporters: ['progress', 'kjhtml'],
     port: 9876,
