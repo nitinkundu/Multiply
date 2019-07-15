@@ -65,6 +65,15 @@ pipeline
                 
             }
         }
+        stage ('Deploy'){
+            steps{
+                 withCredentials([usernamePassword(credentialsId: 'devops-tomcat', passwordVariable: 'pass', usernameVariable: 'userId')]) {
+              //withCredentials([usernameColonPassword(credentialsId: 'Tomcat server secret key', variable: 'password1')]) {
+     //echo "My password is '${password1}'!"
+                    //sh label: '', script:'curl -u "${userId}" "${pass}" http://ec2-18-224-182-74.us-east-2.compute.amazonaws.com:8080/manager/text/undeploy?path=/Subha_Spring_Test_1'
+                    sh label: '', script: 'curl -u  $userId:$pass --upload-file nitin.zip http://ec2-18-224-182-74.us-east-2.compute.amazonaws.com:8080/manager/text/deploy?config=file:/var/lib/tomcat8/nitin.zip\\&path=/Nitin-Angular'
+            }
+        }
         /*stage ('Deploy') {
             steps {
                   withCredentials([file(credentialsId: 'atlassian-tools', variable: 'secret_key_for_tomcat')]) {
