@@ -16,16 +16,16 @@ module.exports = function (config) {
     client: {
       clearContext: false // leave Jasmine Spec Runner output visible in browser
     },
-    browsers: ['PhantomJS'],
+    browsers: ['phantomjs'],
       //customLaunchers: {
       //ChromeHeadlessCI: {
       //base: 'ChromeHeadless',
       //flags: ['--no-sandbox']
       //}
-    },
+    
     coverageIstanbulReporter: {
-      dir: require('path').join(__dirname, '../coverage/Multiply'),
-      reports: ['html', 'lcovonly'],
+      dir: require('path').join(__dirname, './coverage/Multiply'),
+      reports: ['html', 'lcovonly','text-summary'],
       fixWebpackSourcePaths: true,
       thresholds: {
         statements: 50,
@@ -39,7 +39,7 @@ module.exports = function (config) {
     colors: true,
     logLevel: config.LOG_INFO,
     autoWatch: true,
-    browsers: ['ChromeHeadless']
+    browsers: ['phantomjs']
     //singleRun: false,
     //restartOnFileChange: true
   });
