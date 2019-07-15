@@ -17,10 +17,10 @@ module.exports = function (config) {
       clearContext: false // leave Jasmine Spec Runner output visible in browser
     },
     browsers: ['PhantomJS'],
-      customLaunchers: {
-      ChromeHeadlessCI: {
-      base: 'ChromeHeadless',
-      flags: ['--no-sandbox']
+      //customLaunchers: {
+      //ChromeHeadlessCI: {
+      //base: 'ChromeHeadless',
+      //flags: ['--no-sandbox']
       }
     },
     coverageIstanbulReporter: {
