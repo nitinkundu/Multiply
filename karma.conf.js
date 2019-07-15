@@ -21,7 +21,7 @@ module.exports = function (config) {
       //ChromeHeadlessCI: {
       //base: 'ChromeHeadless',
       //flags: ['--no-sandbox']
-      }
+      //}
     },
     coverageIstanbulReporter: {
       dir: require('path').join(__dirname, '../coverage/Multiply'),
