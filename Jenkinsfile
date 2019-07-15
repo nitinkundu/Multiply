@@ -56,13 +56,14 @@ pipeline
                 sh 'cd dist/Multiply; zip -r ../../nitin.zip .'
             }
         }
-        stage ( 'nexus')
-        {
+        stage ('Nexus'){
             steps{
-               
-                sh script: 'curl -v -u trainee:trainee --upload-file nitin.zip http://3.14.251.87:8081/nexus/content/repositories/devopstraining/Nitin_Angular/nitin.zip'
+                sh 'ls'
+                withCredentials([usernamePassword(credentialsId: 'sudipa_nexus', passwordVariable: 'pass', usernameVariable: 'usr')]) {
+                 sh label: '', script: 'curl -u ${usr}:${pass} --upload-file nitin.zip http://3.14.251.87:8081/nexus/content/repositories/devopstraining/Nitin-Angular/nitin.zip'
+                }
+                
             }
-            
         }
         /*stage ('Deploy') {
             steps {
