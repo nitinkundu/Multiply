@@ -6,7 +6,7 @@ pipeline
     
     stages
     {
-        stage('checkout')
+        /*stage('checkout')
         {
             steps{
                 withCredentials([string(credentialsId: 'Nitin_Git', variable: 'git')]) {
@@ -17,7 +17,7 @@ pipeline
                 ])
                 }
              }
-        }
+        }*/
         stage('Dependencies') 
         {
             steps
