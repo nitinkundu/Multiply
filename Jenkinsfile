@@ -6,18 +6,6 @@ pipeline
     
     stages
     {
-        /*stage('checkout')
-        {
-            steps{
-                withCredentials([string(credentialsId: 'Nitin_Git', variable: 'git')]) {
-                checkout([$class: 'GitSCM',
-                branches: [[name: 'origin/master']],
-                extensions: [[$class: 'WipeWorkspace']],
-                userRemoteConfigs: [[url: "${git}"]]
-                ])
-                }
-             }
-        }*/
         stage('Dependencies') 
         {
             steps
@@ -84,5 +72,13 @@ pipeline
             }
         }*/ 
     }
+    post {
+    success {
+      slackSend (color: '#00BB00', message: "SUCCESS: Job '${JOB_NAME} [${BUILD_NUMBER}]' (${BUILD_URL})")
+    }
+    failure {
+      slackSend (color: '#BB0000', message: "FALIURE: Job '${JOB_NAME} [${BUILD_NUMBER}]' (${BUILD_URL})")
+    }
+  }
 }
 
