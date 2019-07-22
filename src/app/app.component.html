@@ -1,72 +1,76 @@
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
-  <div class="container">
-    <br />
-    <div class="row">
-            <div style="text-align:center">
-                    <h1>CALCULATOR</h1>
-            </div>
-    </div>
-    <br />
-    
-    <div class="row">
-            <div style="text-align:center">
-        <div class="col-md-6">
-            <input type="number" [(ngModel)]="num1" placeholder="Enter Number 1" class="form-control" />
-        </div>
-        <div class="col-md-6">
-            <input type="number" [(ngModel)]="num2" placeholder="Enter Number 2" class="form-control" />
-        </div>
-    </div>
-    </div>
-    <br />
-    <style>
-.button {
-  background-color: #4CAF50; /* Green */
-  border: none;
-  color: white;
-  padding: 15px 32px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  margin: 4px 2px;
-  cursor: pointer;
-}
 
-.button2 {background-color: #008CBA;} /* Blue */
-.button3 {background-color: #f44336;} /* Red */ 
-.button4 {background-color: #e7e7e7; color: black;} /* Gray */ 
-.button5 {background-color: #555555;} /* Black */
-</style>
-    <div class="row text-center">
-            <div style="text-align:center">
-        <div class="col-md-3">
-            <button class="button button2" (click)='add()'>Add</button>
+  <div class="container">
+        <br />
+        <div class="row">
+                <div style="text-align:center">
+                        <h1>CALCULATOR</h1>
+                </div>
         </div>
-        <div class="col-md-3">
-            <button class="button button3" (click)='substract()'>Substract</button>
+        <br />
+        
+        <div class="row">
+                <div style="text-align:center">
+            <div class="col-md-6">
+                <input type="number" [(ngModel)]="num1" placeholder="Enter Number 1" class="form-control" />
+            </div>
+            <div class="col-md-6">
+                <input type="number" [(ngModel)]="num2" placeholder="Enter Number 2" class="form-control" />
+            </div>
         </div>
-        <div class="col-md-3">
-            <button class="button button4" (click)='multiply()'>Multiply</button>
         </div>
-        <div class="col-md-3">
-            <button class="button button5" (click)='divide()'>Divide</button>
-        </div>
-        <div class="col-md-3">
-            <button class="button button" (click)='square()'>Square</button>
-        </div>
-        <div class="col-md-3">
-            <button class="button button6" (click)='cube()'>Cube</button>
-        </div>
-       </div> 
-    <br />
-    <div class="row">
-            <div style="text-align:left">
-        <div class="col-md-5 col-md-offset-4">
-            <h2>Result = {{result}} </h2>
+        <br />
+        <style>
+    .button {
+      background-color: #4CAF50; /* Green */
+      border: none;
+      color: white;
+      padding: 10px 20px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+      margin: 4px 2px;
+      cursor: pointer;
+    }
+    
+    .button2 {background-color: #008CBA;} 
+    .button3 {background-color: #f44336;}
+    .button4 {background-color: #c49619;}  
+    .button5 {background-color: #a23455;} 
+    .button6 {background-color: #000090;}
+    .button7 {background-color: #ff0707;}
+
+    </style>
+        <div class="row text-center">
+                <div style="text-align:center" >
+            <div class="col-md-3">
+                <button class="button button2"  (click)='add()'>Add</button>
+            </div>
+            <div class="col-md-3">
+                <button class="button button3"  (click)='substract()'>Substract</button>
+            </div>
+            <div class="col-md-3">
+                <button class="button button4"  (click)='multiply()'>Multiply</button>
+            </div>
+            <div class="col-md-3">
+                <button class="button button5"   (click)='divide()'>Divide</button>
+            </div>
+            <div class="col-md-3">
+                <button class="button button" (click)='square()'>Square</button>
+            </div>
+            <div class="col-md-3">
+                <button class="button button6"  (click)='cube()'>Cube</button>
+            </div>
+            <div class="col-md-3">
+                    <button class="button button7"  (click)='sqrt()'>Sqrt</button>
+                </div>
+           </div> 
+        <br />
+        <div class="row">
+                <div style="text-align:left">
+            <div class="col-md-5 col-md-offset-4">
+                <h2>Result = {{result}} </h2>
+            </div>
         </div>
     </div>
-</div>
-</div>
+    </div>

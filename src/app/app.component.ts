@@ -10,7 +10,9 @@ export class AppComponent {
   title = 'Calculator';
   num1: number;
   num2: number;
+  sqroot: number;
   result: number;
+  temp: number;
   add() {
       this.result = this.num1 + this.num2;
   }
@@ -28,5 +30,16 @@ export class AppComponent {
   }
   cube() {
   this.result = this.num1 * this.num1 * this.num1;
+  }
+  sqrt(){
+    this.sqroot = this.num1 / 2;
+    this.temp = 0;
+    while(this.sqroot!= this.temp)
+    { 
+      this.temp = this.sqroot;
+      this.sqroot = ( this.num1/this.temp + this.temp) / 2;
+  }
+  this.result=this.sqroot;
+
   }
 }
